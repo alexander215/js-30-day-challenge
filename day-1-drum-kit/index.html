@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kpd>A</kpd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kpd>S</kpd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kpd>D</kpd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kpd>F</kpd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kpd>G</kpd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kpd>H</kpd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kpd>J</kpd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kpd>K</kpd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kpd>L</kpd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+  <script>
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+      if(!audio) return;
+      audio.currentTime = 0; // This rewinds to start so sounds can play over each other
+      audio.play();
+      key.classList.add('playing');
+    }
+
+    function removeTransition(e){
+      if(e.propertyName !== 'transform') return;
+      this.classList.remove('playing');
+    }
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    
+    window.addEventListener('keydown', playSound);
+  </script>
+  
+</body>
+</html>
