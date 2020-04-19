@@ -26,9 +26,12 @@ a {
 
 .individual-day {
   width: 8em;
-  height: 8em;
+  height: 10em;
   border: 1px solid;
   margin: 0 0 2em 0;
+  padding: 0 .5em;
+  color: #242582;
+  background-color: #F64C72;
 }
 
 .all-days-container a {
