@@ -1,9 +1,20 @@
-html {
-  background-color: orange;
+body {
+  background-color: #242582;
+  color: white;
+  text-align: center;
+  font-family: 'Cantarell', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+a {
+  color: #F64C72; 
 }
 
 /* DARK BLUE: #242582 */
 /* DARKER PURPLE: #553D67 */
-/* PINKISH: F64C72 */
+/* PINKISH: #F64C72 */
 /* LIGHTER PURPLE: #99738E */
 /* BLUISH: #2F2FA2 */
