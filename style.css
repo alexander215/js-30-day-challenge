@@ -13,6 +13,29 @@ a {
   color: #F64C72; 
 }
 
+.main-container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.all-days-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.individual-day {
+  width: 8em;
+  height: 8em;
+  border: 1px solid;
+  margin: 0 0 2em 0;
+}
+
+.all-days-container a {
+  text-decoration: none;
+}
+
+
 /* DARK BLUE: #242582 */
 /* DARKER PURPLE: #553D67 */
 /* PINKISH: #F64C72 */
