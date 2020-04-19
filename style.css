@@ -1,0 +1,54 @@
+body {
+  background-color: #242582;
+  color: white;
+  text-align: center;
+  font-family: 'Cantarell', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+a {
+  color: #F64C72; 
+}
+
+.main-container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.all-days-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.individual-day {
+  width: 8em;
+  height: 10em;
+  border: 1px solid;
+  margin: 0 0 2em 0;
+  padding: 0 .5em;
+  border-radius: .5em;
+  color: #242582;
+  background-color: #F64C72;
+}
+
+.individual-day:hover {
+  transform: scale(1.1);
+  /* color: #2F2FA2; */
+  /* background-color: #242582; */
+  /* color: #F64C72; */
+}
+
+.all-days-container a {
+  text-decoration: none;
+}
+
+
+/* DARK BLUE: #242582 */
+/* DARKER PURPLE: #553D67 */
+/* PINKISH: #F64C72 */
+/* LIGHTER PURPLE: #99738E */
+/* BLUISH: #2F2FA2 */
