@@ -20,7 +20,7 @@ a {
 
 .all-days-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -30,8 +30,16 @@ a {
   border: 1px solid;
   margin: 0 0 2em 0;
   padding: 0 .5em;
+  border-radius: .5em;
   color: #242582;
   background-color: #F64C72;
+}
+
+.individual-day:hover {
+  transform: scale(1.1);
+  /* color: #2F2FA2; */
+  /* background-color: #242582; */
+  /* color: #F64C72; */
 }
 
 .all-days-container a {
