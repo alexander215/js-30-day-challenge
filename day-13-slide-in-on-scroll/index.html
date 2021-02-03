@@ -61,10 +61,16 @@
     const sliderImages = document.querySelectorAll('.slide-in');
 
     function checkSlide(e) {
-      console.log(e);
+      console.count(e);
+      console.log(window.scrollY);
+      sliderImages.forEach(slideImage => {
+        // STOPPED HERE ON TUESDAY FEBRUARY 2ND
+        // VIDEO PAUSED AT 06:14
+        // const slideInAt = 
+      })
     }
 
-    window.addEventListener('scroll', checkSlide)
+    window.addEventListener('scroll', debounce(checkSlide));
 
   </script>
 
